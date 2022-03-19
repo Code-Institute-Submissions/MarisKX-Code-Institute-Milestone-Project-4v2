@@ -15,3 +15,57 @@
     margin-top: 10px;
     background: rgba(255,255,255, 0.8);
 }
+
+.menu-row {
+    width: 100%;
+    --mdb-gutter-x: -0.5rem;
+}
+
+.free-search-form {
+    margin-left: 5%;
+}
+
+#sidenav-searchbar {
+    height: 36px;
+}
+
+.select-wrapper {
+    width: 90%;
+    margin-left: 5%;
+    background-color: white;
+    border-radius: 0 !important;
+}
+
+.form-control:focus {
+    border-radius: 0 !important;
+}
+
+/* Views for laptops and smaller screens */
+@media (max-width: 1900px) {
+    .desktop-sidebar {
+        width: 25%;
+    }
+    .desktop-content {
+        width: 75%;
+        margin-left: 26%;
+    }
+}
+
+@media (max-width: 1500px) {
+    .desktop-sidebar {
+        display: none;
+    }
+    .desktop-content {
+        width: 98%;
+        margin-left: 2%;
+    }
+}
+
+@media (max-width: 992px) {
+    .desktop-content {
+        width: 98%;
+        margin-left: 3%;
+    }
+}
+
+

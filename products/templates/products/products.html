@@ -3,9 +3,17 @@
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/topnav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/products.css' %}">
 {% endblock %}
 
 {% block extra_title %}Products{% endblock %}
+
+{% block mobilenav %}
+  <div class="row mobile-topnav bg-orange">
+    {% include 'includes/topnav.html' %}
+  </div>
+{% endblock %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -15,16 +23,95 @@
     </div>
 {% endblock %}
 
-{% block content %}
 
-<div class="row main-content h-100">
+{% block content %}
+<div class="row main-content">
     <div class="col desktop-sidebar bg-orange h-100">
         {% include 'includes/sidebar.html' %}
     </div>
     <div class="col desktop-content">
-        {{ products }}
-        <div class="test"></div>
-        {{ products }}
+        {% for product in products %}
+        <div class="card mb-3 mt-3 pt-3 pb-3 px-3 product-card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                {% if product.image %}
+                    <a class="product-image-link" href="">
+                        <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </a>
+                {% else %}
+                    <a class="product-image-link" href="">
+                        <img class="card-img-top img-fluid product-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                    </a>
+                {% endif %}
+              </div>
+              <div class="col-md-8 px-3">
+                <div class="card-body">
+                  <h3 class="card-title">
+                    <strong>
+                      {{ product.name }}
+                        {% if product.category.name == "winter_tyre" %}
+                          <i class="snow-blue fa-solid fa-snowflake"></i>
+                        {% else %}
+                          <i class="sun-yellow fa-solid fa-sun"></i>
+                        {% endif %}
+                    </strong>
+                  </h3>
+                  {% if product.manufacturer.image %}
+                  <p class="card-text mt-4"><img class="brand-logo-small" src="{{ product.manufacturer.image.url }}" alt="{{ product.manufacturer }}"></p>
+                  {% else %}
+                  <p class="card-text mt-4">{{ product.manufacturer.display_name }}</p>
+                  {% endif %}
+                  <h4 class="card-text mt-4">{{ product.size.full_size_display }}</h4>
+                  <h4 class="card-title mt-4"><strong>{{ product.price }} Eur</strong></h4>
+
+                  <form class="form mt-5 quantity-input-form" action="" method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="col-12 my-3">
+                          <div class="form-group quantity-input-field">
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <button class="decrement-qty btn plus-minus-btn rounded-0" 
+                                    data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                  <span class="icon">
+                                    <i class="fas fa-minus"></i>
+                                  </span>
+                                </button>
+                              </div>
+                              <input class="form-control qty_input" type="number" name="quantity" value="4" min="1" max="8" data-item_id="{{ product.ean_code }}" id="id_qty_{{ product.id }}">
+                              <div class="input-group-append">
+                                <button class="increment-qty btn plus-minus-btn rounded-0"
+                                    data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                  <span class="icon">
+                                    <i class="fas fa-plus"></i>
+                                  </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                            <input type="submit" class="btn bg-orange rounded-0 text-uppercase my-3" value="Add to shopping cart">
+                        </div>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+              
+            </div>
+            {% if request.user.is_superuser %}
+                <div class="row">
+                  <small>
+                    <a href="">Update</a> | 
+                    <a class="text-danger" href="">Delete</a>
+                  </small>
+                </div>
+              {% endif %}
+          </div>
+          {% endfor %}
     </div>
 </div>
 

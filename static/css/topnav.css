@@ -1,0 +1,12 @@
+#mobilemenu {
+    display: none;
+    max-width: 500px;
+    margin: auto;
+    min-height: 800px;
+}
+
+@media (min-width: 1499px) {
+    .mobile-topnav {
+        display: none;
+    }
+}
