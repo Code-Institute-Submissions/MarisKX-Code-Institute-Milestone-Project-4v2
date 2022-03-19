@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Cookie&family=Domine:wght@500&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/iStock-1030486504-tires.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 70px);
+    font-family: 'Domine', serif;
+}
+
+header {
+    background-color: rgb(250, 129, 0);
+}
+
+/* Custom color classes */
+
+.text-black-orange {
+    color: rgb(112, 58, 0) !important;
+}
+
+.background-orange {
+    background-color: rgb(250, 129, 0) !important;
+}
+
+.background-black-orange {
+    background-color: rgb(112, 58, 0) !important;
+}
+
+.background-white {
+    background-color: white !important;
+}
+
+/* from Bulma - slightly customized */
+.icon {
+    align-items: center;
+    justify-content: center;
+}
+
+.main-logo {
+    width: fit-content;
+}
+
+.logo-decorator {
+    font-family: 'Cookie', cursive;
+    font-weight: bold;
+    font-size: 2.8rem;
+    text-shadow: 2px 2px rgb(255, 255, 255);
+}
+
+
+.cta-text {
+    text-shadow: 2px 2px 8px white;
+    font-size: 7rem;
+}
+
+.cta-btn {
+    width: 80%;
+    height: 80px;
+    font-size: 2.5rem;
+}
+
+.header-container {
+    padding-top: 70px;
+    height: 70px;
+}
