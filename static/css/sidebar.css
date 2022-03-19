@@ -1,0 +1,17 @@
+.desktop-sidebar,
+.desktop-content {
+    flex: 0 0 auto;
+}
+
+
+.desktop-sidebar {
+    width: 20%;
+    position: fixed;
+}
+
+.desktop-content {
+    width: 80%;
+    margin-left: 21%;
+    margin-top: 10px;
+    background: rgba(255,255,255, 0.8);
+}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+{% endblock %}
+
+{% block extra_title %}Products{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="row main-content h-100">
+    <div class="col desktop-sidebar bg-orange h-100">
+        {% include 'includes/sidebar.html' %}
+    </div>
+    <div class="col desktop-content">
+        {{ products }}
+        <div class="test"></div>
+        {{ products }}
+    </div>
+</div>
+
+{% endblock %}
