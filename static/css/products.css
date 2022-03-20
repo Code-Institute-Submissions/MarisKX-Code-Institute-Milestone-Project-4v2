@@ -11,6 +11,14 @@
     padding-left: 10%;
 }
 
+.sun-yellow {
+    color: #ffea00;
+}
+
+.snow-blue {
+    color: #00d5ff
+}
+
 .product-image-link {
     margin: auto 0;
 }
@@ -41,6 +49,11 @@
 .plus-minus-btn:disabled,
 .plus-minus-btn:focus {
     box-shadow: none;
+}
+
+.product-descrption {
+    padding-left: 0;
+    padding-right: 10%;
 }
 
 .form-control:focus {
@@ -140,6 +153,7 @@
         width: 98%;
         margin-left: 1%;
         margin-right: 1%;
+        font-size: smaller;
     }
     .quantity-input-form {
         margin-left: 10%;
@@ -156,11 +170,24 @@
     .card-text {
         font-size: 1.2rem;
     }
+    .product-descrption {
+        margin-top: 5%;
+        padding-left: 1%;
+        padding-right: 1%;
+        font-size: 0.8rem;
+    }
+    .product-details p{
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 474px) {
     .quantity-input-form {
         margin-left: 5%;
+    }
+    .product-details {
+        margin-left: 5px !important;
+        margin-right: 5px !important;
     }
 }
 
