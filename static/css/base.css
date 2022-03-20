@@ -12,6 +12,10 @@ body {
     font-family: 'Domine', serif;
 }
 
+option {
+    font-family: "Font Awesome 5 Free";
+}
+
 a,
 a:hover {
     color: black;

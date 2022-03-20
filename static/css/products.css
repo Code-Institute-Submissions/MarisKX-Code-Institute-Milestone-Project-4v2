@@ -103,6 +103,28 @@
     box-shadow: inset 0 0 0 1px rgb(250 129 0);
 }
 
+.select-options-wrapper {
+    height: fit-content;
+    max-height: 450px !important;
+}
+
+/* Back To Top button (btt) and update/remove */
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 25px;
+    right: 50px;
+    font-size: 1.8rem;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 
 /* Custom styles for smaller screens */
 @media (max-width: 1100px) {
