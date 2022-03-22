@@ -138,6 +138,20 @@
     cursor: pointer;
 }
 
+/* ID's for javaScript */
+
+#show-product-details {
+    display: none;
+}
+
+#show-more-details-icon-up {
+    display: none;
+}
+
+#hide-details {
+    display: none;
+}
+
 
 /* Custom styles for smaller screens */
 @media (max-width: 1100px) {

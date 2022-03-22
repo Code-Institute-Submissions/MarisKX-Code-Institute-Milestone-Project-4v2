@@ -5,6 +5,10 @@
     min-height: 800px;
 }
 
+#show-product-details {
+    display: none;
+}
+
 @media (min-width: 1499px) {
     .mobile-topnav {
         display: none;

@@ -32,6 +32,10 @@ a:hover {
     color: rgb(112, 58, 0) !important;
 }
 
+.text-orange {
+    color: rgb(250, 129, 0) !important;
+}
+
 .bg-orange {
     background-color: rgb(250, 129, 0) !important;
 }
