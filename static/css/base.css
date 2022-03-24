@@ -88,10 +88,6 @@ a:hover {
     width: 99%;
 }
 
-.test {
-    height: 1290px;
-}
-
 
 
 /* Removes up and down arrows on number input field - Chrome, Safari, Edge, Opera  */
@@ -128,6 +124,10 @@ input[type=number] {
     .cta-text {
         font-size: 5rem;
     }
+    #show-details,
+    #hide-details {
+        scroll-margin-top: 161px;
+    }
 }
 
 @media (max-width: 474px) {
@@ -138,11 +138,24 @@ input[type=number] {
         font-size: 2.5rem;
         margin-left: 10%;
     }
-
+    .small-logo {
+        font-size: 1.4rem;
+    }
+    .header-container {
+        height: 142px;
+    }
+    #show-details,
+    #hide-details {
+        scroll-margin-top: 142px;
+    }
 }
 
-@media (max-width: 455px) {
+@media (max-width: 351px) {
     .header-container {
-        height: 195px;
+        height: 174px;
+    }
+    #show-details,
+    #hide-details {
+        scroll-margin-top: 174px;
     }
 }

@@ -4,11 +4,12 @@
         href="#"
         role="button"
         onclick="showMobileMenu()"
-    >
-        <i class="fa-solid fa-chevrons-down fa-xl my-2"></i>
+    >   
+        <i id="showmenumobile" class="fa-solid fa-chevrons-down fa-xl my-2"></i>
+        <i id="hidemenumobile" class="fa-solid fa-chevrons-up fa-xl my-2"></i>
     </a>
 </div>
-<div id="mobilemenu">
+<div id="mobilemenu" class="mobile-menu">
     <div class="row menu-row my-5">
         <div class="col-12 text-center">
             <a href="{% url 'products' %}" class="btn bg-white nav-btn rounded-0 w-90">
@@ -97,12 +98,31 @@
 
 {% block postloadjs %}
     <script type="text/javascript">
+        let mobileMenu = document.getElementById("mobilemenu");
+        mobileMenu.style.display = "none";
 		function showMobileMenu() {
-            var x = document.getElementById("mobilemenu");
-            if (x.style.display === "none") {
-              x.style.display = "block";
+            let showMenuMobileIcon = document.getElementById("showmenumobile");
+            let hideMenuMobileIcon = document.getElementById("hidemenumobile");
+            let fixedHeader = document.getElementById("main-header");
+            let mainContent = document.getElementsByClassName("main-content")[0];
+            let spacerHeader = document.getElementsByClassName("header-container")[0];
+            let bttButton = document.getElementsByClassName("btt-button")[0];
+            if (mobileMenu.style.display === "none") {
+                mobileMenu.style.display = "block";
+                showMenuMobileIcon.style.display = "none";
+                hideMenuMobileIcon.style.display = "block";
+                fixedHeader.classList.remove("fixed-top");
+                mainContent.style.display = "none";
+                spacerHeader.style.display = "none";
+                bttButton.style.display = "none";
             } else {
-              x.style.display = "none";
+                mobileMenu.style.display = "none";
+                showMenuMobileIcon.style.display = "block";
+                hideMenuMobileIcon.style.display = "none";
+                fixedHeader.classList.add("fixed-top");
+                mainContent.style.display = "block";
+                spacerHeader.style.display = "block";
+                bttButton.style.display = "block";
             }
           }
     </script>

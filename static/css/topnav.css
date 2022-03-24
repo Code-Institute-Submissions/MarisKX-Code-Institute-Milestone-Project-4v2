@@ -2,10 +2,11 @@
     display: none;
     max-width: 500px;
     margin: auto;
-    min-height: 800px;
+    height: 100%;
+    margin-bottom: 20px;
 }
 
-#show-product-details {
+#hidemenumobile {
     display: none;
 }
 
