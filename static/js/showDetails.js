@@ -3,6 +3,7 @@ let showDetailsText = document.getElementById("show-details");
 let hideDetailsText = document.getElementById("hide-details");
 let showDetailsDown = document.getElementById("show-more-details-icon-down");
 let showDetailsUp = document.getElementById("show-more-details-icon-up");
+let productCard = document.getElementsByClassName("product-card")[0];
 productDetails.style.display = "none";
 function showProductdetails() {
     if (productDetails.style.display === "none") {
@@ -20,5 +21,6 @@ function showProductdetails() {
         hideDetailsText.style.display = "none";
         showDetailsDown.style.display = "block";
         showDetailsUp.style.display = "none";
+        window.scrollTo(0,0)
     }
 }
