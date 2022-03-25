@@ -86,7 +86,7 @@
                   <h4 class="card-text mt-4">{{ product.size.full_size_display }}</h4>
                   <h4 class="card-title mt-4"><strong>{{ product.price }} Eur</strong></h4>
 
-                  <form class="form mt-5 quantity-input-form" action="" method="POST">
+                  <form class="form mt-5 quantity-input-form" action="{% url 'add_to_cart' product.ean_code %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
                         <div class="col-12 my-3">
@@ -149,4 +149,5 @@
     <script src="{% static 'js/backToTopButton.js' %}"></script>
     <script src="{% static 'js/sortHandler.js' %}"></script>
     <script src="{% static 'js/quantityAdjustingScript.js' %}"></script>
+    <script src="{% static 'js/mobileSearchFilter.js' %}"></script>
 {% endblock %}

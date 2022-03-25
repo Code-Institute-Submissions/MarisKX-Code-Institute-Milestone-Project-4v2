@@ -63,7 +63,7 @@
                   <p class="card-text">{{ product.size.full_size_display }}</p>
                   <h4 class="card-title"><strong>{{ product.price }} Eur</strong></h4>
 
-                  <form class="form mt-5" action="" method="POST">
+                  <form class="form mt-5" action="{% url 'add_to_cart' product.ean_code %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
                       <div class="col-12">

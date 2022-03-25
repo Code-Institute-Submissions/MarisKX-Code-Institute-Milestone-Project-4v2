@@ -130,6 +130,7 @@
     bottom: 25px;
     right: 50px;
     font-size: 1.8rem;
+    z-index: 5;
 }
 
 .btt-link,
