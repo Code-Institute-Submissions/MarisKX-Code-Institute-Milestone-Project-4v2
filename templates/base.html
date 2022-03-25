@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="{% static 'mdb/css/mdb.min.css' %}"/>
         <link rel="stylesheet" href="{% static 'mdb/plugins/css/all.min.css' %}"/>
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'css/toasts.css' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -57,7 +58,17 @@
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}
-
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/toast_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/toast_warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/toast_success.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/toast_info.html' %}
+                    {% endif %}
+                {% endwith %}
             {% endfor %}
         </div>
     {% endif %}
@@ -73,6 +84,9 @@
         <!-- MDB -->
         <script type="text/javascript" src="{% static 'mdb/js/mdb.min.js' %}"</script>
         <script type="text/javascript" src="{% static 'mdb/plugins/js/all.min.js' %}"</script>
+        <!-- Custom Scripts -->
+        <script src="{% static 'js/mobileSearchFilter.js' %}"></script>
+        <script src="{% static 'js/toasts.js' %}"></script>
     {% endblock %}
 
     
