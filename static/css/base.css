@@ -218,6 +218,17 @@ input[type=number] {
         font-size: 1.4rem;
         z-index: 5;
     }
+    .cta-text {
+        text-shadow: 5px 5px 10px white;
+        font-size: 5rem;
+    }
+    
+    .cta-btn {
+        color: white;
+        width: 80%;
+        min-height: 90px;
+        font-size: 3rem;
+    }
 }
 
 @media (max-width: 474px) {
