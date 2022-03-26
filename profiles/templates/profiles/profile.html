@@ -91,7 +91,13 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>{{ order.date|date }}</td>
+                                        <td>
+                                            <a class="text-black-orange" 
+                                                href="{% url 'order_history' order.order_number %}"
+                                                title="{{ item.product.name }}">
+                                                {{ order.date|date }}
+                                            </a>
+                                        </td>
                                         <td>
                                             <ul class="list-unstyled">
                                                 {% for item in order.lineitems.all %}
@@ -105,7 +111,13 @@
                                                 {% endfor %}
                                             </ul>
                                         </td>
-                                        <td>{{ order.order_total }} Eur</td>
+                                        <td>
+                                            <a class="text-black-orange" 
+                                                href="{% url 'order_history' order.order_number %}"
+                                                title="{{ item.product.name }}">
+                                                {{ order.order_total }} Eur
+                                            </a>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
