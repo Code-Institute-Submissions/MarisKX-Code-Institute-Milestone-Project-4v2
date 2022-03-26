@@ -121,24 +121,6 @@
     max-height: 450px !important;
 }
 
-/* Back To Top button (btt) and update/remove */
-
-.btt-button {
-    height: 42px;
-    width: 42px;
-    position: fixed;
-    bottom: 25px;
-    right: 50px;
-    font-size: 1.8rem;
-    z-index: 5;
-}
-
-.btt-link,
-.update-link,
-.remove-item {
-    cursor: pointer;
-}
-
 /* ID's for javaScript */
 
 #show-product-details {
