@@ -65,3 +65,7 @@ select option[value=""] {
     margin: 0;
     height: 100%;
 }
+
+#div_id_country > select {
+    padding: 0 10px 0 10px;
+}
