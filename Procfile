@@ -1,1 +1,1 @@
-web: gunicorn wheelshop.wsgi:application
+web: gunicorn wheelshop_v2.wsgi:application
