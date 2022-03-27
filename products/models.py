@@ -1,5 +1,10 @@
 from django.db import models
-from django.core.validators import MaxValueValidator, MinValueValidator
+from django.core.validators import (
+    MaxValueValidator,
+    MinValueValidator,
+    MinLengthValidator,
+)
+
 
 
 # Create your models here.
@@ -75,12 +80,12 @@ class TyreSize(models.Model):
 
 
 class Product(models.Model):
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
-    ean_code = models.CharField(max_length=254, null=True, blank=True)
-    size = models.ForeignKey('TyreSize', null=True, blank=True, on_delete=models.SET_NULL)
-    load_index = models.CharField(max_length=254, null=True, blank=True)
-    speed_index = models.CharField(max_length=254, null=True, blank=True)
-    manufacturer = models.ForeignKey('Manufacturer', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('Category', null=False, blank=False, on_delete=models.CASCADE)
+    ean_code = models.CharField(max_length=13, validators=[MinLengthValidator(13)], null=False, blank=False)
+    size = models.ForeignKey('TyreSize', null=False, blank=False, on_delete=models.CASCADE)
+    load_index = models.CharField(max_length=2, null=False, blank=False)
+    speed_index = models.CharField(max_length=1, null=False, blank=False)
+    manufacturer = models.ForeignKey('Manufacturer', null=False, blank=False, on_delete=models.CASCADE)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)

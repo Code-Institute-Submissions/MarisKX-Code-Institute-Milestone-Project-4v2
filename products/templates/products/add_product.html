@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/topnav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/products.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+    <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
+{% endblock %}
+
+{% block extra_title %}Checkout{% endblock %}
+
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+<div class="col-sm-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 mt-2">
+    <div class="card product-card-details mb-3 mt-4 pt-3 pb-3 px-3">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="logo-font mb-4">Webshop Management</h2>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3 pb-5">
+                <h5 class="logo-font mb-4">Add New Product</h5>
+                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="text-center">
+                        <a class="btn bg-orange rounded-0" href="{% url 'products' %}">Cancel</a>
+                        <button class="btn bg-orange rounded-0" type="submit">Add Product</button>
+                    </div>
+                </form>
+            </div>            
+        </div>
+    </div>
+</div>
+<div class="btt-button shadow-sm rounded-0 border border-black bg-orange">
+    <a class="btt-link d-flex h-100">
+        <i class="fa-regular fa-up text-white mx-auto my-auto"></i>
+    </a>
+</div>
+
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script src="{% static 'js/backToTopButton.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#id_image").addClass("bg-orange");
+        
+        });
+    </script>
+{% endblock %}

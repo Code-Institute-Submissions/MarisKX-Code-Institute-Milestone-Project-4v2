@@ -10,6 +10,13 @@ class ProductForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
+        placeholders = {
+            'ean_code': '13 digits',
+            'load_index': '2 digits',
+            'speed_index': '1 letter',
+        }
+
         categories = Category.objects.all()
         brands = Manufacturer.objects.all().order_by('display_name', )
         sizes = TyreSize.objects.all().order_by('rim_size', 'width',)
@@ -20,5 +27,6 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = display_name_categories
         self.fields['manufacturer'].choices = display_names_brands
         self.fields['size'].choices = full_size_display
+
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'rounded-0'

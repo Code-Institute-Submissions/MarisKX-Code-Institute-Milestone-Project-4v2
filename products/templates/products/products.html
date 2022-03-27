@@ -127,8 +127,8 @@
             {% if request.user.is_superuser %}
                 <div class="row">
                   <small>
-                    <a href="">Update</a> | 
-                    <a class="text-danger" href="">Delete</a>
+                    <a href="{% url 'update_product' product.ean_code %}">Update</a> | 
+                    <a class="text-danger" href="{% url 'delete_product' product.ean_code %}">Delete</a>
                   </small>
                 </div>
               {% endif %}
@@ -138,7 +138,7 @@
 </div>
 <div class="btt-button shadow-sm rounded-0 border border-black bg-orange">
   <a class="btt-link d-flex h-100">
-      <i class="fas fa-arrow-up text-black-orange mx-auto my-auto"></i>
+      <i class="fa-regular fa-up text-white mx-auto my-auto"></i>
   </a>
 </div>
 
