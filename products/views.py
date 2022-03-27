@@ -34,7 +34,7 @@ def all_products(request):
             if not query_search:
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
+
             queries = Q(
                 name__icontains=query_search) | Q(
                 description__icontains=query_search) | Q(
@@ -57,7 +57,7 @@ def all_products(request):
             query_filter_season = request.GET['season']
             query_filter_size = request.GET['size']
             query_filter_brand = request.GET.getlist('brand')
-  
+
             queries = Q(
                 category__name__icontains=query_filter_season) & Q(
                 size__full_size_code__icontains=query_filter_size)
@@ -96,6 +96,7 @@ def all_products(request):
 
     return render(request, 'products/products.html', context)
 
+
 def product_details(request, ean_code):
     """ A view to return the product detail page """
 
@@ -119,7 +120,7 @@ def product_details(request, ean_code):
             if not query_search:
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-                
+
             queries = Q(
                 name__icontains=query_search) | Q(
                 description__icontains=query_search) | Q(
@@ -142,7 +143,6 @@ def product_details(request, ean_code):
             query_filter_season = request.GET['season']
             query_filter_size = request.GET['size']
             query_filter_brand = request.GET.getlist('brand')
-    
             queries = Q(
                 category__name__icontains=query_filter_season) & Q(
                 size__full_size_code__icontains=query_filter_size)
