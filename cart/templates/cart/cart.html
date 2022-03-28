@@ -144,7 +144,7 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript"> window.CSRF_TOKEN = "{{ csrf_token }}"; </script>
+    <script> window.CSRF_TOKEN = "{{ csrf_token }}"; </script>
     <script src="{% static 'js/backToTopButton.js' %}"></script>
     <script src="{% static 'js/quantityAdjustingScript.js' %}"></script>
     <script src="{% static 'js/updateQtyCheckout.js' %}"></script>

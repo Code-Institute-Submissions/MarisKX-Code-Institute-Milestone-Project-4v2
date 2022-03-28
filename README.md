@@ -1,14 +1,14 @@
-<h2 align="center"><img src="https://raw.githubusercontent.com/Code-Institute-Milestone-Project-4v2/main/static/media/Wheelerdealer_logo.png"></h2>
+<h2 align="center"><img src="https://raw.githubusercontent.com/MarisKX/Code-Institute-Milestone-Project-4v2/main/media/Wheelerdealer_logo.png"></h2>
 <h1 align="center">WehhelerDealer online shop and content management application</h1>
 
 <h3 align="center">Live Preview Landing Page</h3>
-<h2 align="center"><img src="https://raw.githubusercontent.com/Code-Institute-Milestone-Project-4v2/main/static/media/LivePreviewIndex.png" width=800></h2>
+<h2 align="center"><img src="https://raw.githubusercontent.com/MarisKX/Code-Institute-Milestone-Project-4v2/main/media/LivePreviewIndex.png" width=800></h2>
 
 <h3 align="center">Live Preview Products Page</h3>
-<h2 align="center"><img src="https://raw.githubusercontent.com/Code-Institute-Milestone-Project-4v2/main/static/media/LivePreviewIndex.png" width=800></h2>
+<h2 align="center"><img src="https://raw.githubusercontent.com/MarisKX/Code-Institute-Milestone-Project-4v2/main/media/LivePreviewProducts.png" width=800></h2>
 
 ### Live project:
-### [Public side](https://code-institute-milestone-p4-v2.herokuapp.com/)
+### [Here](https://code-institute-milestone-p4-v2.herokuapp.com/)
 
 Project, designed specifically for selling car tires online with option to implement car rims and used car tyre-rim sets.
 
