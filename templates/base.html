@@ -83,8 +83,8 @@
     {% block postloadjs %}
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <!-- MDB -->
-        <script type="text/javascript" src="{% static 'mdb/js/mdb.min.js' %}"</script>
-        <script type="text/javascript" src="{% static 'mdb/plugins/js/all.min.js' %}"</script>
+        <script src="{% static 'mdb/js/mdb.min.js' %}"></script>
+        <script src="{% static 'mdb/plugins/js/all.min.js' %}"></script>
         <!-- Custom Scripts -->
         <script src="{% static 'js/toasts.js' %}"></script>
     {% endblock %}

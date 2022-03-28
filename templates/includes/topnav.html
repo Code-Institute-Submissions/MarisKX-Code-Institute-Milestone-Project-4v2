@@ -43,7 +43,7 @@
     <div class="row menu-row">
         <form class="col-12 free-search-form my-3" method="GET" action="{% url 'products' %}">
             <div class="input-group w-90">
-                <input id="sidenav-searchbar" class="form-control background-white text-black-orange rounded-0" type="text" name="q" placeholder="Search"/>
+                <input id="topnav-searchbar" class="form-control background-white text-black-orange rounded-0" type="text" name="q" placeholder="Search"/>
                 <div class="input-group-append">
                     <button type="submit" class="btn bg-white rounded-0 form-control">
                         <i class="icon fas fa-search"></i>
@@ -59,7 +59,7 @@
             <div class="row menu-row">
                 <div class="col-12">
                     <select class="select" name="season">
-                        <option value="{{ categories.name }}" default>Select All</option>
+                        <option value="{{ categories.name }}">Select All</option>
                         {% for category in categories %}
                             <option value="{{ category.name }}">{{ category.display_name}}</option>
                         {% endfor %}
@@ -70,7 +70,7 @@
             <div class="row menu-row">
                 <div class="col-12">
                     <select class="select" data-mdb-placeholder="Select Size" data-mdb-visible-options="6" name="size">
-                        <option value="{{ sizes.full_size_code }}" default>Select All</option>
+                        <option value="{{ sizes.full_size_code }}">Select All</option>
                         {% for size in sizes %}
                             <option value="{{ size.full_size_code }}">{{ size.full_size_display }}</option>
                         {% endfor %}

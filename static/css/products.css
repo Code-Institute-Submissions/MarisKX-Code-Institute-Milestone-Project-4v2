@@ -11,6 +11,10 @@
     padding-left: 10%;
 }
 
+.card-text {
+    text-align: justify;
+}
+
 .sun-yellow {
     color: #ffea00;
 }
