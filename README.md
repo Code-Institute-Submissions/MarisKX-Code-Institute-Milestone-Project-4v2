@@ -142,12 +142,12 @@ Project, designed specifically for selling car tires online with option to imple
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
 -   [W3C Markup Validator](https://validator.w3.org/)
-    1.  [Results Index Home]() 
-    2.  [Results All Products]()
-    3.  [Product Product Details]()
-    4.  [Results Shopping Cart](link)
-    5.  [Results Checkout Page]()
-    6.  [Results Profile Page]()
+    1.  [Results Index Home](https://raw.githubusercontent.com/MarisKX/Code-Institute-Milestone-Project-4v2/main/media/HTMLCheckIndex.png) 
+    2.  [Results All Products](https://raw.githubusercontent.com/MarisKX/Code-Institute-Milestone-Project-4v2/main/media/HTMLCheckProducts.png)
+    3.  [Product Product Details](https://raw.githubusercontent.com/MarisKX/Code-Institute-Milestone-Project-4v2/main/media/HTMLCheckProductDetails.png)
+    4.  [Results Shopping Cart](https://raw.githubusercontent.com/MarisKX/Code-Institute-Milestone-Project-4v2/main/media/HTMLCheckCart.png)
+    5.  [Results Checkout Page](https://raw.githubusercontent.com/MarisKX/Code-Institute-Milestone-Project-4v2/main/media/HTMLCheckCheckout.png)
+    6.  [Results Profile Page](https://raw.githubusercontent.com/MarisKX/Code-Institute-Milestone-Project-4v2/main/media/HTMLCheckProfile.png)
 
 
 ## Further Testing
