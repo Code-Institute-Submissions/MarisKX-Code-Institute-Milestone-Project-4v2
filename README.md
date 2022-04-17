@@ -162,6 +162,10 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 -   In some cases, receiving verification email after creating account, can take up to 10 minutes, reason is still unknow as in most cases email gets received within 1 minute.
 
+## Fixed bugs
+
+-  System will no longer allow to add product with a EAN code (barcode) that allready exists in database by changing products model ean code setting to unique=True.
+
 ## Deployment
 
 ### Heroku
