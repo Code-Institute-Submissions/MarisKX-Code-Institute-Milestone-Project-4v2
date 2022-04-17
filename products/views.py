@@ -180,7 +180,7 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_details', args=[product.ean_code]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add product. Please ensure the form is valid. Keep in mind that EAN code must be unique!')
     else:
         form = ProductForm()
     form = ProductForm()

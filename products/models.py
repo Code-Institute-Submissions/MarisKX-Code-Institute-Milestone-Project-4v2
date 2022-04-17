@@ -81,7 +81,7 @@ class TyreSize(models.Model):
 
 class Product(models.Model):
     category = models.ForeignKey('Category', null=False, blank=False, on_delete=models.CASCADE)
-    ean_code = models.CharField(max_length=13, validators=[MinLengthValidator(13)], null=False, blank=False)
+    ean_code = models.CharField(max_length=13, validators=[MinLengthValidator(13)], unique=True, null=False, blank=False)
     size = models.ForeignKey('TyreSize', null=False, blank=False, on_delete=models.CASCADE)
     load_index = models.CharField(max_length=2, null=False, blank=False)
     speed_index = models.CharField(max_length=1, null=False, blank=False)
